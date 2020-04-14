@@ -135,7 +135,9 @@ Pushing an update to is straightforward -- just run the command:
 python update.py
 ~~~~
 
-The python script `update.py` reads the outline from `story.yaml` and replace.  The comments in the script its walk through each step line by line:
+The python script `update.py` reads the outline from `story.yaml` and replaces the widget on the first page with an image of the first slide in the `example.pptx` presentation.  Just update the presentatioThen, and run the script to push changes to the presalytics API service.
+
+The comments in the script its walk through each step line by line:
 
 ~~~~python
 # update.py
