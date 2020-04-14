@@ -173,7 +173,7 @@ updated_outline = presalytics.StoryOutline.load(updated_story.outline)
 updated_outline.export_yaml('story.yaml')
 ~~~~
 
-You can you the job scheduling tools native to your operating system to automatically push updates to the presalytics API.  if you haven not used these tools before, here are some helpful links for differnt operating systems:
+You can you the job scheduling tools native to your machine to automatically push updates to the presalytics API.  If you haven not used these tools before, here are some helpful links for different operating systems:
 
 * Mac - [Crontab](https://medium.com/better-programming/https-medium-com-ratik96-scheduling-jobs-with-crontab-on-macos-add5a8b26c30)
 
@@ -181,7 +181,9 @@ You can you the job scheduling tools native to your operating system to automati
 
 * Linux - [Crontab](https://opensource.com/article/17/11/how-use-cron-linux)
 
-Teams of analysts typically pursue a more scalable use case that implements server-side job scheduler such as [Celery Beat](https://docs.celeryproject.org/en/latest/userguide/periodic-tasks.html) or [Apache Airflow](https://airflow.apache.org/), where scripts can be written on local machines and pushed to a remote server for 24/7 scheduling, which enable stories, dashboards, presenations to be updates around the clock.  These solutions tend to be tailor-made for the resources and the skill-level of an anlytics team.   If you have question about how to set one of these solutions up, we are happy walk you through.  Send us a question anytime at [inquires@presalytics.io](mailto:inquires@presalytics.io).
+Teams of analysts typically pursue a more scalable use case that implements server-side job scheduler such as [Celery Beat](https://docs.celeryproject.org/en/latest/userguide/periodic-tasks.html) or [Apache Airflow](https://airflow.apache.org/), where scripts can be written on local machines and pushed to a remote server for 24/7 scheduling, which enable stories, dashboards, presenations to be updates around the clock.  These solutions tend to be tailor-made for the resources and the skill-level of an anlytics team.   
+
+If you have question about how to set one of these solutions up, we are happy walk you through.  Send us a question anytime at [inquires@presalytics.io](mailto:inquires@presalytics.io).
 
 
 
