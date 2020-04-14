@@ -24,30 +24,30 @@ In this repository, there 2 files to get aquaited with prior to working through 
 
 To begin, clone this repository from github to an empty local folder of your choosing:
 
-~~~~bash
+```bash
 git clone https://github.com/presalytics/Example--StoryFromFile.git
-~~~~
+```
 
 Then, create a virtual environment and activate it:
 
-~~~~bash
+```bash
 python -m virtualenv venv
 source venv/bin/activate # venv\Scripts\activate.bat (Windows)
-~~~~
+```
 > Note: If using Anaconda, you can also setup a conda environment to get going.
 
 
 Install presalytics from the python package index:
 
-~~~~bash
+```bash
 pip install presalytics
-~~~~
+```
 
 Use the presaltyics command line interface (CLI) to confiure your workspace:
 
-~~~~bash
+```bash
 presalytics config {YOUR_USERNAME}
-~~~~
+```
 
 ---
 
@@ -55,13 +55,13 @@ presalytics config {YOUR_USERNAME}
 
 Create a story using the following command
 
-~~~~bash
+```bash
 presalytics create example.pptx --ooxml-file
-~~~~
+```
 
 The command will open a browser window and prompt you to login to the api. After logging into, this action could take as long as 30 to complete.  Once completed, you should have a the story outline in file in your workspace called `story.yaml`:
 
-~~~~yaml
+```yaml
 additionalProperties:
 outline_version: 0.3.1
 description: ''
@@ -121,7 +121,7 @@ plugins:
     kind: style
     name: ooxml-theme
 title: ' This Is an Example Page In a Story'
-~~~~
+```
 
 
 ---
@@ -131,15 +131,15 @@ title: ' This Is an Example Page In a Story'
 
 Pushing an update to is straightforward -- just run the command:
    
-~~~bash
+```bash
 python update.py
-~~~~
+```
 
 The python script `update.py` reads the outline from `story.yaml` and replaces the widget on the first page with an image of the first slide in the `example.pptx` presentation.  Just update the presentatioThen, and run the script to push changes to the presalytics API service.
 
 The comments in the script its walk through each step line by line:
 
-~~~~python
+```python
 # update.py
 import os
 import presalytics
@@ -173,7 +173,7 @@ updated_outline = presalytics.StoryOutline.load(updated_story.outline)
 
 # Writes to the Story Outline to `story.yaml`
 updated_outline.export_yaml('story.yaml')
-~~~~
+```
 
 You can you the job scheduling tools native to your machine to automatically push updates to the presalytics API.  If you haven not used these tools before, here are some helpful links for different operating systems:
 
